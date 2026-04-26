@@ -3,7 +3,7 @@
 **Name:** Sean Duffy  
 **Course:** CIS 1051  
 **Project:** Final Project  
-**Video Demo:** [PASTE VIDEO LINK HERE]
+**Video Demo:** https://1drv.ms/v/c/c07caad25ecf3e7d/IQAz605okDRMT4TfXaoBrO_RAdaTAI_HGnJrpES0ZWIXCsY?e=EDI7bi
 
 ## Project Overview
 
