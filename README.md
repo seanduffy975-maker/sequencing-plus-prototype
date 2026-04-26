@@ -1,55 +1,69 @@
-
 # Sequencing Plus Prototype
 
-**Name:** Sean Duffy
-**Course:** CIS 1051
-**Project:** Final Project
+**Name:** Sean Duffy  
+**Course:** CIS 1051  
+**Project:** Final Project  
 **Video Demo:** [PASTE VIDEO LINK HERE]
 
 ## Project Overview
 
-Sequencing Plus Prototype is a Python program that analyzes real Statcast pitch data from Baseball Savant. The goal is to recommend the best pitch for different game situations.
+Sequencing Plus Prototype is a Python project that analyzes real Statcast pitch data from Baseball Savant and recommends the best pitch for specific game situations.
 
-The program uses count, batter side, pitcher throwing hand, and a selected goal to recommend pitches. The goal can be strike, strikeout, groundout, out, or avoid damage.
+The goal of the project is to build a prototype pitch sequencing model that uses situational variables to support pitch selection decisions.
 
 ## What the Program Does
 
 The program asks the user for:
 
 - Count
-- Batter side
-- Pitcher hand
-- Goal
+- Batter handedness
+- Pitcher throwing hand
+- Number of outs
+- Whether runners are on base
+- Desired goal (strike, strikeout, groundout, out, or avoid damage)
 
-Then it analyzes the Statcast data and recommends the best pitch for that situation.
+Using those inputs, the program filters real Statcast data and ranks the top five pitch options based on success rate and sample size, then gives a final pitch recommendation.
 
 ## Example
 
-If the user enters:
+Example input:
 
-- Count: 1-2
-- Batter side: R
-- Pitcher hand: L
-- Goal: strikeout
+- Count: 1-2  
+- Batter Side: R  
+- Pitcher Hand: L  
+- Outs: 1  
+- Runners On Base: Yes  
+- Goal: Strikeout
 
-The program looks through the data and recommends the pitch with the highest strikeout rate for that situation.
+Example output:
+
+1. Curveball  
+2. Slider  
+3. Split-Finger  
+
+Final Recommendation: Throw Curveball
+
+In this example, the recommendation is based on the highest strikeout success rate in that specific scenario.
 
 ## Challenges
 
-One challenge was keeping the project realistic. My original idea was much bigger and would include things like weather, player hot streaks, and more advanced scouting data. For this class, I narrowed it down into a prototype that still shows the main idea.
+One challenge was taking a much larger idea and turning it into a realistic prototype for a class project. My original concept included many more variables, but I narrowed it down to core situational inputs while keeping the main sequencing idea intact.
 
-Another challenge was working with real Statcast data because the file had a lot of columns. I had to figure out which columns mattered most for the project.
+Another challenge was working through a large real Statcast dataset and identifying which variables were most useful for the model.
 
 ## What I Learned
 
-I learned how Python can be used to analyze real sports data. I also learned how to read CSV files, use dictionaries, filter data by conditions, and make basic recommendations from the results.
+Through this project I learned how Python can be used for sports analytics, how to work with CSV data, organize information with dictionaries, filter data by multiple conditions, and build a basic recommendation engine from real data.
+
+I also learned how model complexity has to be balanced with usability and sample size.
 
 ## Future Improvements
 
-In the future, I would like to add:
+Future versions could include:
 
-- Weather
-- Batter hot/cold streaks
-- Pitch location
-- More advanced sequencing
-- Real pitcher-specific reports
+- Weather conditions
+- Batter hot and cold streaks
+- Pitch location and tunneling
+- Multi-pitch sequence prediction
+- Pitcher-specific scouting models
+- Expanded expected outcome modeling
